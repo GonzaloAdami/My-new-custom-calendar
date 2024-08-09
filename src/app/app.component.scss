@@ -1,0 +1,258 @@
+$boder: #0466C8;
+$border-size: 1.5px;
+$table: rgba(255, 255, 255, 0.742);
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tabla{
+    @extend .flex-center;
+    flex-direction: column;
+    height: auto;
+    border: $border-size solid $boder;
+    box-shadow: 1px 1px 15px 10px #3600303c;
+    border-radius: 20px;
+    background-color: $table;
+}
+.tabla-clases{
+    display: flex;
+    float: left;  
+    width: auto;
+    height: auto;
+
+}
+.columna-finde{  
+    @extend .flex-center;
+    align-items: start;
+    width: 100%;
+    gap: 29%;
+}
+.file-finde{
+    @extend .flex-center;
+    border: $border-size solid $boder;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width:27em;
+    padding: 0.5em 1em;
+}
+.columna{
+    @extend .flex-center;
+    flex-direction: column;
+    justify-content: start;
+    max-width: 10em;
+    min-width: 10em;
+    height: auto;
+    gap: 0.5em;
+    padding: 1em;
+
+}
+
+
+.file{
+    @extend .flex-center;
+    overflow: hidden;
+    min-width: 10em;
+    max-width: 10em;
+    min-height: 2em;
+    max-height: 2em;
+    border: $border-size solid $boder;
+    border-radius: 10px;
+    transition: background 0.5s ease-in-out;
+
+}
+.hover:hover{
+    background-color: rgba(255, 0, 0, 0.147);
+}
+
+.title{
+    color: #0353A4;
+    font-weight: bold;
+}
+/*
+? --------------------------------- Pendientes ---------------*/
+
+.sabado , .domingo{
+    min-width: 50%;
+    max-width: 50%;
+    min-height: 10em;
+    max-height: 10em;
+}
+.pendientes-ideas{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.ideas, .pendientes{
+    @extend .flex-center;
+    flex-direction: column;
+    justify-content: start;
+    width: 18em;
+    height: auto;
+    border: 2px solid $boder;
+    border-radius: 10px;
+    background-color: $table;
+    padding: 1em;
+    box-shadow: 1px 1px 15px 10px #3600303c;
+}
+.file-pendiende{
+    @extend .file;
+    min-width: 16em;
+}
+
+/*
+? ------------------------------ Interface ------------*/
+
+.interface{
+    @extend .flex-center;
+    float: left;
+    align-items: start;
+    gap: 2em;
+    
+}
+
+.Calendario{
+    @extend .flex-center;
+    flex-direction: column;
+    padding: 5em 0em
+}
+
+/*
+ ? --------------------- Inputs ---------------*/
+ .input-table{
+    @extend .file;
+    border: none;
+    min-width: 100%;
+    min-height: 2em;
+    background-color: transparent;
+    padding-left: 2em;
+ }
+ .input-table:focus{
+    outline: none;
+    padding-left: 2em;
+ }
+ 
+ @media (max-height: 500px) and (max-width: 1500px) {
+  
+    .interface{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3em;
+        min-width: 100%;
+    }
+    .tabla-clases{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(45%, 50%));
+        min-width: 100%;
+    }
+    .tabla{
+        min-width: auto;
+        width: 95%;
+        max-width: 90%;
+        box-sizing: border-box;
+        overflow: hidden;
+        padding: 1em;
+
+
+    }
+    .file{
+        min-width: 19em;
+        max-width: 19em;
+        max-height: 2em;
+        min-height: 2em;
+        padding: 0em 1em;
+        margin: 0 auto;
+        
+    }
+    .columna-finde{
+        display: flex;
+        float: left;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        min-width: 100%;
+        gap: 15em;
+    }
+    .sabado , .domingo{
+        max-width: 100%;
+        min-width: 100%;
+       
+    }
+    .pendientes , .ideas{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        min-width:25em;
+        max-width:25em;
+
+    }
+    .file-finde{
+        max-width: 15em;
+        min-width: 15em;
+    }
+    .file-pendiende{
+        max-width: 20em;
+        min-width: 20em;
+    }
+    .pendientes-ideas{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(2em, 20em));
+        width: 70%;
+       gap: 3em;
+    }
+
+   
+   
+  
+ }
+
+ @media(max-width: 800px) {
+    .interface{
+        display: flex;
+        flex-direction: column;
+    }
+    .tabla{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .tabla-clases{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .file{
+        min-width: 17em;
+        max-width: 17em;
+    }
+    .columna-finde{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        min-width: 100%;
+        gap: 0.5em;
+    }
+    .sabado , .domingo{
+        max-width: 100%;
+        min-width: 100%;
+       
+    }
+    .file-finde{
+        max-width: 15em;
+        min-width: 15em;
+    }
+    .tabla-clases{
+        display: flex;
+        flex-direction: column;
+    }
+ }
